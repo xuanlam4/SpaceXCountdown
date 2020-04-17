@@ -54,7 +54,7 @@ menu li a:hover {
   margin: 0;
 }
 .countdown-container {
-  transition: transform 500ms cubic-bezier(0.21, 0.91, 0.54, 0.6);
+  transition: transform 1000ms cubic-bezier(0.21, 0.91, 0.54, 0.6);
   margin-top: 15vh;
 }
 .home-btn {
@@ -70,7 +70,7 @@ menu li a:hover {
   row-gap: 15px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 500ms cubic-bezier(0.21, 0.91, 0.54, 0.6);
+  transition: max-height 1000ms cubic-bezier(0.21, 0.91, 0.54, 0.6);
 }
 .text {
   font-size: 12vw;
@@ -98,7 +98,7 @@ h3 {
 .launch-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 600ms cubic-bezier(0.21, 0.91, 0.54, 0.6);
+  transition: max-height 1000ms cubic-bezier(0.21, 0.91, 0.54, 0.6);
 }
 .focus {
   background-color: #6f6f70;
