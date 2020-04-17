@@ -54,7 +54,7 @@ menu li a:hover {
   margin: 0;
 }
 .countdown-container {
-  transition: transform 300ms cubic-bezier(0.21, 0.91, 0.54, 0.6);
+  transition: transform 500ms cubic-bezier(0.21, 0.91, 0.54, 0.6);
   margin-top: 15vh;
 }
 .home-btn {

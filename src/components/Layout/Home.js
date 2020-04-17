@@ -12,19 +12,21 @@ const Home = () => {
     launchData: {},
   });
 
-  const [direction, setDirection] = useState("up");
-
   const onclick = () => {
     let content = document.getElementsByClassName("info-box")[0];
     let container = document.getElementsByClassName("countdown-container")[0];
-    if (direction === "up" && !content.style.maxHeight) {
+    let downBtn = document.getElementsByClassName("down-btn")[0];
+    let upBtn = document.getElementsByClassName("up-btn")[0];
+    if (!content.style.maxHeight) {
       container.style.transform = `translateY(-2vw)`;
       content.style.maxHeight = "120px";
-      setDirection("down");
+      upBtn.style.display = "inline-block";
+      downBtn.style.display = "none";
     } else {
       container.style.transform = `translateY(0.5vw)`;
       content.style.maxHeight = null;
-      setDirection("up");
+      upBtn.style.display = "none";
+      downBtn.style.display = "inline-block";
     }
   };
 
@@ -104,8 +106,15 @@ const Home = () => {
                   <p className="subtext2">{site}</p>
                 </div>
               </div>
-              <button className="home-btn" onClick={onclick}>
-                {direction === "up" ? <p>&#x25BD;</p> : <p>&#x25B3;</p>}
+              <button className="home-btn down-btn" onClick={onclick}>
+                <p>&#x25BD;</p>
+              </button>
+              <button
+                className="home-btn up-btn"
+                onClick={onclick}
+                style={{ display: "none" }}
+              >
+                <p>&#x25B3;</p>
               </button>
             </div>
           )}
