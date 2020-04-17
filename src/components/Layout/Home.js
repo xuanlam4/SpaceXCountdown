@@ -23,7 +23,6 @@ const Home = () => {
       upBtn.style.display = "inline-block";
       downBtn.style.display = "none";
     } else {
-      console.log(content.style.height);
       container.style.transform = `translateY(0.5vw)`;
       content.style.maxHeight = null;
       upBtn.style.display = "none";

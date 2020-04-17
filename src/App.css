@@ -8,7 +8,7 @@ body {
   color: #fff;
 }
 .container {
-  min-height: calc(100vh - 8vh);
+  min-height: calc(100vh - 8.2vh);
   margin-bottom: 2.5vh;
 }
 button {
