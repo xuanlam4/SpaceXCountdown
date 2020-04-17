@@ -241,6 +241,7 @@ h3 {
   .info-box {
     display: flex;
     flex-direction: column;
+    transition: max-height 2000ms $cubic;
   }
 
   .accordition {
