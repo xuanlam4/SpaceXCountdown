@@ -20,6 +20,8 @@ button {
   font-size: 2em;
 }
 menu {
+  position: relative;
+  z-index: 100;
   text-align: center;
   margin-top: 20px;
 }
