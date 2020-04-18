@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
-import { convertSecondToFullTime } from "../hooks";
+import { convertSecondToFullTime, formatDate } from "../hooks";
 import { NEXT_LAUNCH_URL } from "../URLs";
 import Loading from "../../giphy.gif";
 
@@ -99,7 +99,9 @@ const Home = () => {
                 </div>
                 <div>
                   <p className="subtext2-title">Launch date</p>
-                  <p className="subtext2">{date}</p>
+                  <p className="subtext2">
+                    {formatDate(date)} (Indochina Time)
+                  </p>
                 </div>
                 <div>
                   <p className="subtext2-title">Launch site</p>
