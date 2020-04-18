@@ -1,7 +1,6 @@
 import React from "react";
 import Menu from "./components/Layout/Menu";
 import Home from "./components/Layout/Home";
-import Dump from "./components/Layout/DUmps";
 import Footer from "./components/Layout/Footer";
 import PastLaunch from "./components/Launch/PastLaunch";
 import FutureLaunch from "./components/Launch/FutureLaunch";

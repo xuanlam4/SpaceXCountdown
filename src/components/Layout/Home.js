@@ -19,7 +19,7 @@ const Home = () => {
     let upBtn = document.getElementsByClassName("up-btn")[0];
     if (!content.style.maxHeight) {
       container.style.transform = `translateY(-2vw)`;
-      content.style.maxHeight = "120px";
+      content.style.maxHeight = "130px";
       upBtn.style.display = "inline-block";
       downBtn.style.display = "none";
     } else {

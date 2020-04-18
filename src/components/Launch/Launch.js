@@ -43,7 +43,7 @@ const Launch = (props) => {
       .then((res) => res.json())
       .then((data) => setState({ isLoading: false, data: data }))
       .catch((err) => console.log(err));
-  }, []);
+  }, [url]);
 
   return state.isLoading ? (
     <img className="loading" src={Loading} alt="" />
