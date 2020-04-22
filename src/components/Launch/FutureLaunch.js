@@ -65,7 +65,7 @@ const FutureLaunch = () => {
   };
 
   const futureHeaderName = [
-    "Date (Indochina Time)",
+    "Date \n (Indochina Time)",
     "Mission name",
     "Rocket",
     "Launch site",

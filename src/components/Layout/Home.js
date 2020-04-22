@@ -4,6 +4,12 @@ import { convertSecondToFullTime, formatDate } from "../hooks";
 import { NEXT_LAUNCH_URL } from "../URLs";
 import Loading from "../../giphy.gif";
 
+const translateDistance = {
+  containerDown: "0.5vw",
+  containerUp: "-2vw",
+  content: "130px",
+};
+
 const Home = () => {
   const [state, setState] = useState({
     startTime: 0,
@@ -18,12 +24,12 @@ const Home = () => {
     let downBtn = document.getElementsByClassName("down-btn")[0];
     let upBtn = document.getElementsByClassName("up-btn")[0];
     if (!content.style.maxHeight) {
-      container.style.transform = `translateY(-2vw)`;
-      content.style.maxHeight = "130px";
+      container.style.transform = `translateY(${translateDistance.containerUp})`;
+      content.style.maxHeight = `${translateDistance.content}`;
       upBtn.style.display = "inline-block";
       downBtn.style.display = "none";
     } else {
-      container.style.transform = `translateY(0.5vw)`;
+      container.style.transform = `translateY(${translateDistance.containerDown})`;
       content.style.maxHeight = null;
       upBtn.style.display = "none";
       downBtn.style.display = "inline-block";
