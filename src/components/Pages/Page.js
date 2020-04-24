@@ -1,13 +1,13 @@
 import React from "react";
-import { renderTableHeader } from "../hooks";
+import { renderTableHeader } from "../utils";
 
-const Accordition = (props) => {
+const Page = (props) => {
   const { tableData, headerName } = props;
 
   return (
-    <div className="accordition">
+    <div className="page">
       {tableData && (
-        <table className="accordition__table">
+        <table className="page__table">
           <tbody>
             {renderTableHeader(headerName)}
             {tableData}
@@ -18,4 +18,4 @@ const Accordition = (props) => {
   );
 };
 
-export default Accordition;
+export default Page;

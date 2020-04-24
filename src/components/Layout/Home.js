@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
-import { convertSecondToFullTime, formatDate } from "../hooks";
+import { convertSecondToFullTime, formatDate } from "../utils";
 import { NEXT_LAUNCH_URL } from "../URLs";
 import Loading from "../../giphy.gif";
 

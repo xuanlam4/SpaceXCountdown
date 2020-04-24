@@ -1,33 +1,31 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-const Pagination = ({ currentPage, numOfPages, setCurrentPage }) => {
-  const onPrevPageClick = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
-  };
-
-  const onNextPageClick = () => {
-    if (currentPage < numOfPages) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
-
+const Pagination = ({ currentPage, numOfPages, url }) => {
   return (
     <div className="pagination">
-      <button onClick={onPrevPageClick}>&laquo;</button>
+      <NavLink to={currentPage > 1 && `/${url}/${currentPage - 1}`}>
+        &laquo;
+      </NavLink>
       {Array(numOfPages)
         .fill(null)
         .map((page, index) => (
-          <button
-            className="pagination-btn"
-            key={index}
-            onClick={() => setCurrentPage(index + 1)}
+          <NavLink
+            to={`/${url}/${index + 1}`}
+            exact={true}
+            activeStyle={{
+              color: "#d9d9d9",
+              backgroundColor: "#292a2e",
+              borderRadius: "5px",
+              border: "none",
+            }}
           >
             {index + 1}
-          </button>
+          </NavLink>
         ))}
-      <button onClick={onNextPageClick}>&raquo;</button>
+      <NavLink to={currentPage < numOfPages && `/${url}/${currentPage + 1}`}>
+        &raquo;
+      </NavLink>
     </div>
   );
 };

@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const menuBtn = [
-    { link: "/", title: "home" },
-    { link: "/future", title: "future" },
-    { link: "/past", title: "past" },
+    { link: "/", title: "home", exact: true },
+    { link: "/future", title: "future", exact: false },
+    { link: "/past", title: "past", exact: false },
   ];
 
   return (
@@ -18,7 +18,7 @@ const Header = () => {
               <li key={i}>
                 <NavLink
                   to={btn.link}
-                  exact={true}
+                  exact={btn.exact}
                   activeStyle={{
                     color: "#d9d9d9",
                     backgroundColor: "#292a2e",

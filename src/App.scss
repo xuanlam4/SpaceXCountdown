@@ -5,7 +5,7 @@ $third-dark-color: #6f6f70;
 $second-light-color: #d9d9d9;
 
 $duration: 1000ms;
-$cubic: cubic-bezier(0.85, 0.2, 0.44, 0.75);
+$cubic: cubic-bezier(0.53, 0.12, 0.48, 0.75);
 
 * {
   font-family: "Space Mono", monospace;
@@ -126,7 +126,7 @@ h3 {
   text-align: center;
 }
 
-//accordition
+//pages and accordition
 
 .launch-content {
   max-height: 0;
@@ -142,7 +142,7 @@ h3 {
   border-top: 0.5px $main-light-color solid;
 }
 
-.accordition {
+.page {
   width: 85%;
   margin: auto;
   overflow-x: auto;
@@ -200,12 +200,13 @@ h3 {
 //pagination
 .pagination {
   text-align: center;
-  button {
+  a {
     display: inline-block;
     margin: 5px 5px;
     color: #d9d9d9;
     background-color: $main-dark-color;
     padding: 5px 10px;
+    text-decoration: none;
 
     &:hover,
     &.btn-focus {
@@ -246,7 +247,7 @@ h3 {
     flex-direction: column;
   }
 
-  .accordition {
+  .page {
     width: 90%;
 
     &__table {
